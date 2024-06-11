@@ -1,0 +1,22 @@
+.c-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c-container{
+    display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.c-container>img{
+    width: 8rem;
+    margin: 2vw;
+}
+@media (max-width: 640px) {
+    .c-container{
+        flex-direction: column;
+        }
+}

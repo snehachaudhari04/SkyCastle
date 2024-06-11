@@ -1,0 +1,71 @@
+
+.page1 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .page1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(21, 42, 47, 0.3); /* Adjust the last value (0.5) for the desired level of transparency */
+     z-index: 1; /* Ensure the overlay is above the image */
+  }
+.page1 img{
+    height: 85vh;
+    width: 100vw;
+    object-fit: cover; /* or 'contain' */
+    z-index: 2;
+    
+    
+  }
+  .extra-tagline{
+    position: absolute;
+    z-index: 10;
+    left:25%;
+    top:40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+    
+  }
+  .spandesign{
+    display: flex;
+    flex-direction: row;
+    margin: 5vw;
+  }
+  .span1{
+    display: flex;
+    flex-direction: column;
+    margin-left: 3vw;
+    align-items: center;
+  }
+  .serch{
+    
+  font-weight: 700;
+  width: 20vw;
+  padding: 0.6rem 1.4rem;
+  color:orange;
+  background-color: #93895F;
+  border: none;
+  transition: all 300ms ease-in;
+  }
+  ::placeholder{
+    color:orange;
+  }
+  
+  @media (max-width: 640px) {
+    .extra-tagline{
+      top:30%;
+      right: 30%;
+    }
+    .serch{
+      width: 50vw;
+    }
+  }
+  

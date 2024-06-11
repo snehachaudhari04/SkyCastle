@@ -1,0 +1,34 @@
+.h-wrapper{
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+    background-color: #273845;
+    height: 15vh;
+    
+    
+}
+.header-left{
+    width: 40vw;
+    padding: 5%;
+}
+.header-right{
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header-menu:hover{
+  cursor: pointer;
+  color:#93895F;
+}
+@media (max-width: 640px) {
+    .imglogo{
+        height: 200px;
+        width: 200px;
+       
+    }
+    .header-right{
+       display: none;
+    }
+}
+
