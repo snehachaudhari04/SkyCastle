@@ -4,6 +4,7 @@ import Header from './Components/Header/Header';
 import Extra from './Components/Extra/Extra';
 import Companies from './Components/Companies/Companies';
 import Residency from './Components/Residency/Residency';
+import Value from './Components/Value/Value';
 function App() {
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
     <Extra/>
     <Companies/>
     <Residency/>
+    <Value/>
     
     
     </>

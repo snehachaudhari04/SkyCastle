@@ -21,14 +21,5 @@
   cursor: pointer;
   color:#93895F;
 }
-@media (max-width: 640px) {
-    .imglogo{
-        height: 200px;
-        width: 200px;
-       
-    }
-    .header-right{
-       display: none;
-    }
-}
+
 
