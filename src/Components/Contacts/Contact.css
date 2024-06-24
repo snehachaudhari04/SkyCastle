@@ -25,6 +25,11 @@
   .c-left {
     gap: 0.5rem;
   }
+  .smalltext{
+    font-size: 1rem;
+    color: black;
+    font-weight: bolder;
+  }
   
   .contactModes .row {
     gap: 1.5px;

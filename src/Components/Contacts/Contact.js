@@ -11,8 +11,8 @@ const Contact = () => {
         {/* left side */}
         <div className="flexColStart c-left">
           <span className="orangeText">Our Contact Us</span>
-          <span className="primaryText">Easy to contact us</span>
-          <span className="secondaryText">
+          <span className="secondaryText">Easy to contact us</span>
+          <span className="smalltext">
             We always ready to help by providijng the best services for you. We
             beleive a good blace to live can make your life better{" "}
           </span>

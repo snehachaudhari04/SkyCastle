@@ -1,26 +1,45 @@
-import React from 'react'
-import './Header.css';
-import logo from './Logo.png';
+
+import React, { useState } from "react";
+import "./Header.css";
+import { BiMenuAltRight } from "react-icons/bi";
+import OutsideClickHandler from "react-outside-click-handler";
 
 function Header() {
-  return (
-    
-    <section className='h-wrapper'>
-        
-          <div className='header-left'>
-            <img  className='imglogo'src={logo} height={300} width={300}alt ="SkyCastleLogo" ></img>
-          </div>
-            <div className='header-right'>
-            <a  className='header-menu primaryText'href="">Residency</a>
-            <a className='header-menu primaryText'href="">Residency</a>
-            <a className='header-menu primaryText'href="">Residency</a>
-            <a className='header-menu primaryText'href="">Residency</a>
-            <button className='button'>Contact</button>
-            </div>
+  const [menuOpened, setMenuOpened] = useState(false);
+  const getMenuStyles = (menuOpened) => {
+    if (document.documentElement.clientWidth <= 800) {
+      return { right: !menuOpened && "-100%" };
+    }
+  };
 
-     </section>
-    
-  )
+  return (
+    <section className="h-wrapper">
+      <div className="flexCenter paddings innerWidth h-container">
+        <img src="favicon.png" alt="logo" width={100} />
+
+        <OutsideClickHandler
+          onOutsideClick={() => {
+            setMenuOpened(false);
+          }}
+        >
+          <div className=" flexCenter h-menu" style={getMenuStyles(menuOpened)}>
+            <a href="">Recidencies</a>
+            <a href="">Our Value</a>
+            <a href="">Contact Us</a>
+            <a href="">Get Started</a>
+            <button className="button">Contact </button>
+          </div>
+        </OutsideClickHandler>
+
+        <div
+          className="menu-icon"
+          onClick={() => setMenuOpened((prev) => !prev)}
+        >
+          <BiMenuAltRight size={30} />
+        </div>
+      </div>
+    </section>
+  );
 }
 
-export default Header
+export default Header;
